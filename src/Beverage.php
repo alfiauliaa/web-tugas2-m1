@@ -9,8 +9,8 @@ class Beverage extends AbstractMenuItem {
 
     private $isHot;
 
-    public function konstraktor($name, $price, $category, $isHot) {
-        parent::konstraktor($name, $price, $category);
+    public function __construct($name, $price, $category, $isHot) {
+        parent::__construct($name, $price, $category);
         $this->isHot = $isHot;
     }
 

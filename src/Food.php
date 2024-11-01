@@ -10,7 +10,7 @@ class Food extends AbstractMenuItem {
     private $spicyLevel;
 
     public function __construct($name, $price, $category, $spicyLevel) {
-        parent::konstraktor($name, $price, $category);
+        parent::__construct($name, $price, $category);
         $this->spicyLevel = $spicyLevel;
     }
 

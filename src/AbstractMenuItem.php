@@ -7,7 +7,7 @@ abstract class AbstractMenuItem {
     protected $price;
     protected $category;
 
-    public function konstraktor($name, $price, $category) {
+    public function __construct($name, $price, $category) {
         $this->name = $name;
         $this->price = $price;
         $this->category = $category;

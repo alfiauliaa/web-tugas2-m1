@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN NIH BOS</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<!-- BODY -->
+<body>
+    
+<!-- HEADER / NAVBAR -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="/foto/logo.jpeg">
+                <h1>ADMIN DASHBOARD</h1>
+            </div>
+            <nav>
+
+                <!-- searcbar -->
+                <div class="search-bar">
+                    <form role="search">
+                        <input type="text" placeholder="Search" aria-label="Search" class="search-input">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+                
+            </nav>
+        </div>
+        
+    </header>
+
+<!-- MAIN CONTENT -->
+
+<main>
+  <section id="daftar-resep">
+      <h2>Daftar Resep</h2>
+      <div id="filter-kategori">
+          <button onclick="filterKategori('semua')">Semua</button>
+          <button onclick="filterKategori('makanan')">Makanan</button>
+          <button onclick="filterKategori('minuman')">Minuman</button>
+          <button onclick="filterKategori('dessert')">Dessert</button>
+      </div>
+      <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nama Resep</th>
+                  <th>Kategori</th>
+                  <th>Opsi</th>
+                  
+              </tr>
+          </thead>
+          <tbody id="tabel-resep">
+              <!-- Isi tabel akan diisi oleh JavaScript -->
+          </tbody>
+      </table>
+  </section>
+
+  <section id="form-resep">
+      <h2>Tambah/Edit Resep</h2>
+      <form id="form-input-resep">
+        <input type="hidden" id="resep-id">
+        <input type="text" id="nama-resep" placeholder="Nama Resep" required>
+        <select id="kategori-resep" required>
+            <option value="">Pilih Kategori</option>
+            <option value="makanan">Makanan</option>
+            <option value="minuman">Minuman</option>
+            <option value="dessert">Dessert</option>
+        </select>
+        <textarea id="deskripsi-resep" placeholder="Deskripsi Resep" required></textarea>
+        <textarea id="bahan-resep" placeholder="Bahan-bahan" required></textarea>
+        <textarea id="langkah-resep" placeholder="Langkah Memasak" required></textarea>
+        <div class="upload-container">
+            <label for="foto-resep">Unggah Foto Resep:</label>
+            <input type="file" id="foto-resep" accept="image/*" required>
+            <img id="preview-foto" src="#" alt="Pratinjau Foto" style="display: none;">
+        </div>
+        <button type="submit">Simpan</button>
+    </form>
+    
+  </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Masak-Masakkan</h3>
+            <p>Temukan berbagai resep masakan lezat dari berbagai daerah.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Kontak</h3>
+            <p>Email: info@masakmasakkan.com</p>
+            <p>Telp: 1234567890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Ikuti Kami</h3>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Masak-Masakkan. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+<script src="/FE/js/admin.js"></script>
+
+</body>
+</html>
